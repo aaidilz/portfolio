@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    color: white;
+}
+body{
+    background-color: black;
+}
+
+/* nav */
+.header{
+    top: 0;
+    left: 0;
+    right: 0; /* Set right to 0 */
+    margin: auto;
+    width: 85%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+
+}
+
+.brand{
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+    position: relative;
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: red;
+    height: 3px;
+    transition: 0.3s;
+}
+.navbar a:hover::before{
+    width: 100%;
+    box-shadow: 0 0 10px red;
+}
+.navbar a:active::before{
+    transform: scale(0.5);
+}
+
+.navbar-active{
+    visibility: hidden;
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .brand {
+        margin-left: 0;
+    }
+}
+
+/* main */
+.container section{
+    height: 100vh;
+}
+
+
+.container .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .main .quotes{
+    max-width: 350px;
+    transform: translate(210px,65px);
+}
+.container .main img{
+    width: 250px;
+    opacity: 0.05;
+    position: absolute;
+}
+.container .main .quotes p{
+    font-size: 35px;
+    letter-spacing: 10px;
+    font-weight: bold;
+}
+.container .main .quotes h5{
+    line-height:25px;
+    font-weight: normal;
+    color: grey;
+}
+.container .main .quotes button {
+    border: 1px solid red;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.5s;
+    position: relative;
+}
+
+.container .main .quotes button::after {
+    content: '>>>';
+    position: absolute;
+    left: 65px;
+    top: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 35px;
+    color: red;
+    text-shadow: 0 0 10px red;
+    transition: 0.5s;
+
+}
+
+.container .main .quotes button:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
+}
+.container .main .quotes button:active::after{
+    transform: translateX(25px);
+}
+
+.container .main .quotes button:hover {
+    box-shadow: inset 0 0 5px red, 0 0 5px red;
+}
