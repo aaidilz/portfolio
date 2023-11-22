@@ -97,7 +97,7 @@ body{
     opacity: 0.05;
     position: absolute;
 }
-.container .main img{
+.container .main .me{
     width: 1000px;
     position: absolute;
     transform: translate(-400px);
