@@ -86,15 +86,22 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .container .main .quotes{
     max-width: 350px;
     transform: translate(210px,65px);
 }
-.container .main img{
+.container .main .box{
     width: 250px;
     opacity: 0.05;
     position: absolute;
+}
+.container .main .me{
+    width: 1000px;
+    position: absolute;
+    transform: translate(-400px);
+    z-index: -3;
 }
 .container .main .quotes p{
     font-size: 35px;
