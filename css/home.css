@@ -9,7 +9,29 @@
 body{
     background-color: black;
 }
-
+/* loader */
+.loader{
+    animation: spin 2s linear infinite;
+    background-color: red;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+.loader i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px;
+}
+#content {
+    display: none;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 /* nav */
 .header{
     top: 0;
@@ -80,17 +102,10 @@ body{
 .container section{
     height: 100vh;
 }
-
-
 .container .main{
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-.container .main .quotes{
-    max-width: 350px;
-    transform: translate(210px,65px);
 }
 .container .main .box{
     width: 250px;
@@ -102,6 +117,10 @@ body{
     position: absolute;
     transform: translate(-400px);
     z-index: -3;
+}
+.container .main .quotes{
+    max-width: 350px;
+    transform: translate(210px, 80px);
 }
 .container .main .quotes p{
     font-size: 35px;
@@ -133,7 +152,6 @@ body{
     color: red;
     text-shadow: 0 0 10px red;
     transition: 0.5s;
-
 }
 
 .container .main .quotes button:hover::after {
@@ -146,4 +164,15 @@ body{
 
 .container .main .quotes button:hover {
     box-shadow: inset 0 0 5px red, 0 0 5px red;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+.footer i{
+    font-size: 30px;
+    margin-right: 5px;
 }

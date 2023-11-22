@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
+    <!-- preload -->
+    <div class="loader" id="loader">
+        <i class="fa fa-refresh"></i>
+    </div>
+    <!-- <div id="content" style="display:none;"> -->
     <!-- navbar -->
     <div class="header">
         <a href="#" class="brand">LOGO</a>
@@ -29,12 +35,14 @@
             <img class="box" src="img/Square-Shape.png">
             <img class="me" src="img/pp.png">
                 <div class="quotes">
-                    <p>Lorem.</p>
+                    <p>Aidil Fikri</p>
+                    <span>> </span><span id="type-main"></span>
                     <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi reiciendis deleniti aliquam cupiditate, iste expedita.</h5>
                     <button>About Me</button>
                 </div>
         </section>
         <section class="about">
+            <span>ABOUT</span>
         </section>
     </div>
     <!-- footer -->
@@ -48,7 +56,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Initialize AOS -->
     <script>
-        AOS.init();
+    AOS.init();
+    var typed = new Typed('#type-main', {
+        strings: ['Frontend Developer'],
+        typeSpeed: 50,
+        cursorChar: '_',
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    });
       </script>
 
 </body>
