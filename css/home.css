@@ -9,10 +9,12 @@
 body{
     background-color: black;
 }
+html{
+    scroll-behavior: smooth;
+}
 /* loader */
 .loader{
     animation: spin 2s linear infinite;
-    background-color: red;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -22,7 +24,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(71, 71, 71);
     font-size: 100px;
 }
 #content {
@@ -44,6 +46,7 @@ body{
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 999;
 
 }
 
@@ -89,19 +92,26 @@ body{
     }
 
     .header {
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
     }
 
     .brand {
         margin-left: 0;
     }
+    .navbar-active{
+        visibility: visible;
+        display: contents;
+    }
 }
+/* nav */
 
-/* main */
+/* section */
 .container section{
     height: 100vh;
 }
+/* section */
+/* main */
 .container .main{
     display: flex;
     justify-content: center;
@@ -144,7 +154,7 @@ body{
 .container .main .quotes button::after {
     content: '>>>';
     position: absolute;
-    left: 65px;
+    left: 60px;
     top: 15px;
     opacity: 0;
     transition: opacity 0.3s;
@@ -165,14 +175,53 @@ body{
 .container .main .quotes button:hover {
     box-shadow: inset 0 0 5px red, 0 0 5px red;
 }
-.footer {
+/* main */
+/* about */
+.container .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .about .about-container{
+    margin-top: 100px;
+}
+.container .about .about-header{
     display: flex;
     justify-content: center;
     justify-items: center;
-    margin-bottom: 25px;
-    margin-left: 25px;
 }
-.footer i{
+.container .about .about-header p{
+    font-weight: bold;
+    font-size: 25px;
+    padding: 1px 5px;
+    border: 1px solid rgb(150, 0, 0);
+    box-shadow: 5px 1px red;
+}
+.container .about .about-content{
+    display: flex;
+    justify-content: space-between;
+}
+.container .about .about-content h3{
+    margin: 50px;
+}
+/* about */
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.footer .text{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 85%;
+}
+.footer .text h3{
+    max-width: 45%;
+}
+.footer .social{
     font-size: 30px;
     margin-right: 5px;
 }
