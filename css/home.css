@@ -40,8 +40,7 @@ html{
     left: 0;
     right: 0; /* Set right to 0 */
     margin: auto;
-    width: 85%;
-    padding: 20px;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,12 +48,18 @@ html{
     z-index: 999;
 
 }
-
 .brand{
     font-size: 32px;
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    display: flex;
+    text-decoration: none;
 }
 .navbar a{
     text-decoration: none;
@@ -80,28 +85,67 @@ html{
 .navbar a:active::before{
     transform: scale(0.5);
 }
-
-.navbar-active{
-    visibility: hidden;
+.menu-toggle{
     display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle span{
+    display: block;
+    background-color: white;
+    width: 28px;
+    height: 3px;
+    transition: all 0.3s;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -10px;
+    top: -3px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(-1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform-origin: 0 0;
+    transform: rotate(-45deg) translate(-3px);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: translate(-6px) scale(0);
+    opacity: 0;
 }
 
-@media only screen and (max-width: 700px) {
-    .navbar {
-        display: none;
+@media only screen and (max-width: 800px) {
+    .menu-toggle{
+        display: flex;
     }
-
-    .header {
-        justify-content: space-between;
-        text-align: center;
+    .navbar ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        background-color: red;
+        height: 70vh;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: all 0.5s;
+        opacity: 0;
     }
-
-    .brand {
-        margin-left: 0;
-    }
-    .navbar-active{
-        visibility: visible;
-        display: contents;
+    .navbar ul.slide{
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 /* nav */

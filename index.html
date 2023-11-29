@@ -19,19 +19,24 @@
     </div>
     <div id="content" style="display:none;">
     <!-- navbar -->
-    <div class="header">
+    <nav class="header">
         <a href="#" class="brand">LOGO</a>
         <div class="navbar">
-            <a href="#main">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#">PORTFOLIO</a>
-            <a href="#">GALLERY</a>
-            <a href="#">CONTACT</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
         </div>
-        <div class="navbar-active">
-            =
+        <div class="menu-toggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </div>
+    </nav>
     <!-- main -->
     <div class="container">
         <section class="main" id="main">
@@ -85,6 +90,13 @@
     document.getElementById("loader").style.display = "none";
     document.getElementById("content").style.display = "block";
     });
+
+    const toggle = document.querySelector('.menu-toggle input');
+    const nav = document.querySelector('nav ul');
+
+    toggle.addEventListener('click',function(){
+        nav.classList.toggle('slide')
+    })
       </script>
 
 </body>
