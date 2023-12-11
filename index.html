@@ -5,29 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <!-- assets -->
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
 </head>
 <body>
-    <!-- preload -->
-    <div class="loader" id="loader">
-        <i class="fa fa-gear"></i>
-    </div>
-    <div id="content" style="display:none;">
     <!-- navbar -->
     <nav class="header">
         <a href="#" class="brand">LOGO</a>
         <div class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#project">project</a></li>
             </ul>
         </div>
         <div class="menu-toggle">
@@ -37,37 +33,194 @@
             <span></span>
         </div>
     </nav>
-    <!-- main -->
-    <div class="container">
-        <section class="main" id="main">
-            <img class="box" src="img/Square-Shape.png">
-            <img class="me" src="img/pp.png">
-                <div class="quotes">
-                    <p>Aidil Fikri</p>
-                    <span>> </span><span id="type-main"></span>
-                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi reiciendis deleniti aliquam cupiditate, iste expedita.</h5>
-                    <button onclick="window.location.href='#about'">Get Started</button>
-                </div>
-        </section>
-
-        <section class="about" id="about">
+    <!-- end_navbar -->
+    <!-- hero -->
+    <section class="home">
+        <div class="home-content" data-aos="fade-left">
+            <p>AIDIL FIKRI</p>
+            <span>> </span><span id="typed"></span>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi reiciendis deleniti aliquam cupiditate, iste expedita.</h5>
+            <button onclick="window.location.href='#about'">Get Started</button>
+        </div>
+    </section>
+    <!-- end_hero -->
+        <!-- about -->
+        <div class="about" id="about">
+            <div class="about-title">
+                <h3>こんにちは!</h3>
+            </div>
             <div class="about-container">
-                <div class="about-header" data-aos="fade-down">
-                    <p>INTRODUCE</p>
-                </div>
-                <div class="about-content" data-aos="fade-up">
-                    <h3>Lorem ipsum dolor sit amet.</h3>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+                <div class="about-content">
+                        <img src="image/me.jpeg" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-desc" data-aos="fade-left" data-aos-duration="1000">
+                        <h4 class="name">Muhammad Aidil Fikri</h4>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum fugit sint commodi! Labore qui, saepe sapiente suscipit nam quidem in sit accusamus mollitia? Rem porro ea repudiandae esse sed itaque?</span>
+                    </div>
                 </div>
             </div>
-        </section>
-
-    </div>
-    <!-- footer -->
-    <div class="footer">
-        <div class="text">
-            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus odit autem dolor. Voluptatibus ad inventore beatae ipsam vel quis error doloremque fuga? Veniam, soluta quisquam.</h3>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta assumenda exercitationem ab adipisci velit veritatis.</h3>
+        </div>
+        <!-- end_about -->
+    <!-- experience -->
+    <section class="experience">
+        <div class="exp-title" data-aos="fade">
+            <h3>Experience</h3>
+        </div>
+        <div class="exp" id="experience">
+            <div class="exp-container">
+                <div class="exp-warpper" data-aos="zoom-in">
+                    <div class="exp-card">
+                        <img src="image/program/html.png" alt="">
+                        <h4>HTML</h4>
+                    </div>
+                </div>
+                <div class="exp-warpper" data-aos="zoom-in">
+                    <div class="exp-card">
+                        <img src="image/program/css.png" alt="">
+                        <h4>CSS</h4>
+                    </div>
+                </div>
+                <div class="exp-warpper" data-aos="zoom-in">
+                    <div class="exp-card">
+                        <img src="image/program/js.png" alt="">
+                        <h4>JAVASCRIPT</h4>
+                    </div>
+                </div>
+                <div class="exp-warpper" data-aos="zoom-in">
+                    <div class="exp-card">
+                        <img src="image/program/python.png" alt="">
+                        <h4>PYTHON</h4>
+                    </div>
+                </div>
+                <div class="exp-warpper" data-aos="zoom-in">
+                    <div class="exp-card">
+                        <img src="image/program/bash.png" alt="">
+                        <h4>BASH SCRIPTING</h4>
+                    </div>
+                </div>
+                <div class="exp-warpper" data-aos="zoom-in">
+                    <div class="exp-card">
+                        <img src="image/program/c.png" alt="">
+                        <h4>C</h4>
+                    </div>
+                </div>
+                <div class="exp-warpper" data-aos="zoom-in">
+                    <div class="exp-card">
+                        <img src="image/program/ruby.png" alt="">
+                        <h4>RUBY</h4>
+                    </div>
+                </div>
+                <div class="exp-warpper" data-aos="zoom-in">
+                    <div class="exp-card">
+                        <img src="image/program/php.png" alt="">
+                        <h4>PHP</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end_experience -->
+    <!-- sevices -->
+    <section class="sevices" id="service">
+        <div class="title" data-aos="zoom-in">
+            <h3>Service</h3>
+        </div>
+            <div class="card-container">
+                <div class="card-warpper" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card">
+                        <span>01</span>
+                        <h3>PROGRAMMING</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, laboriosam.</p>
+                        <a href="#">
+                            <i class="fa-regular fa-circle-down"></i> <span>more...</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-warpper" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card">
+                        <span>02</span>
+                        <h3>WEB DEVELOPMENT</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, laboriosam.</p>
+                        <a href="#">
+                            <i class="fa-regular fa-circle-down"></i> <span>more...</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-warpper" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card">
+                        <span>03</span>
+                        <h3>CYBER SECURITY</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, laboriosam.</p>
+                        <a href="#">
+                            <i class="fa-regular fa-circle-down"></i> <span>more...</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- end_sevices -->
+    <form></form>
+    <!-- project -->
+    <section class="project" id="project">
+        <div class="project-title" data-aos="fade">
+            <h3>My Project</h3>
+        </div>
+        <div class="project-container">
+            <div class="project-content" data-aos="fade-right" data-aos-duration="1000">
+                <img src="image/program/python.png" alt="">
+                <div class="project-desc">
+                    <h3>PROJECT 01</h3>
+                    <h4>Lorem, ipsum dolor.</h4>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur dolorum doloremque maiores quos, molestiae autem totam consequuntur quis. Natus accusantium similique cumque aliquam corrupti labore, reprehenderit dignissimos voluptates sunt!</span>
+                </div>
+            </div>
+            <div class="project-content" data-aos="fade-left" data-aos-duration="1000">
+                <div class="project-desc">
+                    <h3>PROJECT 02</h3>
+                    <h4>Lorem, ipsum dolor.</h4>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, corrupti nihil excepturi id, temporibus non nam minus doloremque quam suscipit eligendi veritatis ipsam numquam. Cum eaque blanditiis officiis nulla provident!</span>
+                </div>
+                <img src="image/program/ruby.png" alt="">
+            </div>
+            <div class="project-content" data-aos="fade-right" data-aos-duration="1000">
+                <img src="image/program/bash.png" alt="">
+                <div class="project-desc">
+                    <h3>PROJECT 03</h3>
+                    <h4>Lorem, ipsum dolor.</h4>
+                    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae a voluptate repellendus, autem amet soluta, laudantium ab atque natus nostrum aspernatur optio ullam nihil at praesentium iste dicta fuga labore!</span>
+                </div>
+            </div>
+            <div class="project-content" data-aos="fade-left" data-aos-duration="1000">
+                <div class="project-desc">
+                    <h3>PROJECT 04</h3>
+                    <h4>Lorem, ipsum dolor.</h4>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, repudiandae inventore natus dignissimos incidunt hic assumenda qui alias repellendus necessitatibus, doloribus similique maxime deleniti magnam voluptatem, voluptatibus aperiam ipsum! Vero!</span>
+                </div>
+                <img src="image/program/html.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- end_project -->
+    
+    <section class="footer">
+        <div class="footer-title">
+            <h3>Contact Me</h3>
+        </div>
+        <div class="form">
+            <div class="footer-form">
+                <form name="submit-form">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required><br>
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="msg">Pesan:</label>
+                    <textarea name="msg" id="" cols="50" rows="4" required></textarea>
+                    <button type="submit" class="button-send">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus odit autem dolor. Voluptatibus ad inventore beatae ipsam vel quis error doloremque fuga? Veniam, soluta quisquam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta assumenda exercitationem ab adipisci velit veritatis.</p>
         </div>
         <div class="social">
             <i class="fab fa-instagram"></i>
@@ -75,27 +228,33 @@
             <i class="fab fa-github"></i>
             <i class="fab fa-spotify"></i>
         </div>
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Initialize AOS -->
-    <script>
-    AOS.init();
-    var typed = new Typed('#type-main', {
-        strings: ['Frontend Developer'],
-        typeSpeed: 50,
-        cursorChar: '_',
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("content").style.display = "block";
-    });
+    </section>
 
+    <script>
+
+    AOS.init();
+    
     const toggle = document.querySelector('.menu-toggle input');
     const nav = document.querySelector('nav ul');
 
     toggle.addEventListener('click',function(){
         nav.classList.toggle('slide')
+    })
+
+    var typed = new Typed('#typed', {
+      strings: ['Cyber Security'],
+      typeSpeed: 75,
+      cursorChar: '_',
+    });
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxRkIw6QvxUHdRUDkC6WGrrnOaOCQhTsHGHIc_0DjTrVewOOVmUzl7Wu_nb4Se__94Z/exec'
+    const form = document.forms['submit-form']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
     })
       </script>
 
