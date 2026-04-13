@@ -5,14 +5,22 @@ import { ProjectCard } from "@/components";
 interface ProjectsProps {
   range?: [number, number?];
   exclude?: string[];
+  tag?: string[];
 }
 
-export function Projects({ range, exclude }: ProjectsProps) {
+export function Projects({ range, exclude, tag }: ProjectsProps) {
   let allProjects = getPosts(["src", "app", "work", "projects"]);
 
   // Exclude by slug (exact match)
   if (exclude && exclude.length > 0) {
     allProjects = allProjects.filter((post) => !exclude.includes(post.slug));
+  }
+
+  // Filter by tag
+  if (tag && tag.length > 0) {
+    allProjects = allProjects.filter((post) =>
+      post.metadata.tag?.some((t) => tag.includes(t)),
+    );
   }
 
   const sortedProjects = allProjects.sort((a, b) => {

@@ -1,0 +1,57 @@
+---
+title: "Ngoding & Ngeretas: Panduan Awal Masuk Dunia CTF"
+summary: "Panduan buat yang baru mau masuk ke CTF, dari kenalan sama format lomba sampai ngerjain soal pertama."
+publishedAt: "2026-04-14"
+tag:
+  - "cyber security"
+  - "CTF"
+---
+
+# Apa Itu CTF?
+
+Capture The Flag (CTF) itu kompetisi security yang dikemas kayak game. Isinya bukan tembak-tembakan, tapi bongkar bug, baca kode, ngulik jaringan, dan mikir kreatif buat dapetin *flag*.
+
+Kalau kamu suka ngoprek, penasaran kenapa sistem bisa jebol, atau pengin belajar cyber security lewat praktik langsung, CTF itu tempat yang pas.
+
+## Jenis CTF yang Umum Ditemuin
+
+Biasanya CTF dibagi jadi dua format besar:
+
+1. **Jeopardy-style**
+   Ini yang paling sering. Soalnya dibagi per kategori kayak Web, Crypto, Forensic, Reverse, Pwn, dll. Kamu bebas ngerjain soal mana dulu, dapet poin kalau berhasil.
+
+2. **Attack-Defense**
+   Lebih hardcore. Tiap tim punya server yang (sengaja) rentan. Tugasmu: nutup celah di server sendiri sambil nyari celah di server tim lain. Capek, tapi seru.
+
+### Contoh Soal: Reversing Paling Dasar
+
+Di level awal, reversing kadang sesimpel ini. Nggak perlu Ghidra dulu, cukup baca kodenya:
+
+```python
+def check_password(input_str):
+    secret = "flag{y0u_f0und_m3}"
+    if input_str == secret:
+        return True
+    return False
+
+user_input = input("Enter the flag: ")
+if check_password(user_input):
+    print("Correct!")
+else:
+    print("Try again.")
+````
+
+Kalau kamu lihat ini dan mikir “lah flag-nya keliatan”, ya… betul 😄
+Soal pemula memang tujuannya ngenalin pola, bukan bikin stres.
+
+## Tools yang Sering Dipakai Anak CTF
+
+Beberapa tools yang hampir pasti kepake:
+
+* **Burp Suite** — Buat ngoprek request web, cocok buat Web Exploitation.
+* **Ghidra / IDA** — Teman setia reversing dan binary analysis.
+* **Wireshark** — Buat ngintip paket jaringan, sering muncul di forensic.
+
+Tenang, nggak harus langsung jago semua. Pilih satu kategori dulu, dalami pelan-pelan.
+
+> "CTF bukan soal siapa paling jago, tapi siapa paling mau nyoba dan belajar dari gagal."

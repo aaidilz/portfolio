@@ -1,0 +1,51 @@
+---
+title: "PTSD Platform (Penetration Testing Security Dashboard)"
+publishedAt: "2026-04-14"
+summary: "Dashboard manajemen keamanan siber tingkat lanjut untuk profesional penetration testing dan tim keamanan."
+images:
+  - "/images/projects/ptsd/1.png"
+  - "/images/projects/ptsd/2.png"
+  - "/images/projects/ptsd/3.png"
+  
+team:
+  - name: "Aidil Fikri"
+    role: "Offensive Security Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/aaidilz"
+tag:
+  - "Cyber Security"
+  - "Web Development"
+  - "Security"
+  - "Dashboard"
+---
+
+## Overview
+
+**PTSD Platform (Penetration Testing Security Dashboard)**, atau yang dijuluki sebagai *"The Engine for Security Findings"*, adalah aplikasi manajemen keamanan siber tingkat lanjut yang dirancang khusus untuk para praktisi *penetration testing* dan tim keamanan informasi. 
+
+Sistem ini mentransformasi proses pelaporan keamanan yang tadinya bersifat statis dan manual (seperti Word atau PDF) menjadi platform intelijen keamanan yang terpusat, *real-time*, dan sangat terukur. Dengan fokus pada efisiensi kerja dan keamanan data, PTSD Platform menjadi solusi bagi "reporting fatigue" yang sering dialami oleh para peneliti keamanan.
+
+## Key Features
+
+- **Centralized Project & Scope Management**: Satu pusat kendali untuk mengelola berbagai pengujian keamanan (assessments) lengkap dengan pelacakan aset dan cakupan (*scope*) yang presisi.
+- **Vulnerability Lifecycle Tracking**: Kemampuan untuk memantau siklus hidup temuan secara dinamis, mulai dari identifikasi awal hingga tahap remediasi (*Open, In Progress, Remediated*).
+- **Integrated CVSS v3.1 Engine**: Kalkulator skor risiko standar industri (FIRST.org) yang tertanam langsung untuk menentukan tingkat keparahan (*Critical, High, Medium, Low*) secara akurat dan konsisten.
+- **Advanced Security Analytics**: Visualisasi data secara instan melalui grafik interaktif untuk memantau tren distribusi risiko dan tingkat penuaan kerentanan (*vulnerability aging*).
+- **Professional Digital Reporting**: Fitur ekspor laporan dalam satu klik ke format Markdown dan PDF, didesain khusus agar estetis dan mudah dipahami baik oleh tim teknis maupun level eksekutif.
+
+## Technologies Used
+
+- **Frontend**: Next.js (App Router), React 19, Tailwind CSS v4 untuk performa maksimal.
+- **UI/UX**: Memanfaatkan Shadcn UI dan Radix UI untuk membangun desain *Premium Glassmorphic*.
+- **Backend & Database**: Menggunakan Supabase untuk manajemen PostgreSQL, database *real-time*, dan sistem autentikasi.
+- **Data Security**: Implementasi Crypto-JS untuk enkripsi *end-to-end* pada data temuan sensitif.
+- **Analytics**: Recharts untuk visualisasi metrik dan tren keamanan.
+- **Validation**: Zod dan React Hook Form untuk memastikan integritas dan skema data yang ketat.
+
+## Challenges and Learnings
+
+Salah satu tantangan terbesar dalam membangun platform ini adalah menyeimbangkan antara penyajian data teknis yang kompleks dengan antarmuka yang bersih (minimalis). Implementasi enkripsi AES-256 di sisi klien sebelum pengiriman data ke database memerlukan penanganan state yang sangat hati-hati untuk memastikan integritas data tetap terjaga selama proses enkripsi dan deksripsi.
+
+## Outcome
+
+PTSD Platform telah membuktikan nilai gunanya dalam mempercepat proses pelaporan keamanan hingga 60% dan memastikan bahwa setiap temuan keamanan didokumentasikan dengan standar profesional yang tinggi. Platform ini tidak hanya sebuah dashboard, tetapi juga merupakan aset strategis dalam meningkatkan postur keamanan sebuah organisasi.

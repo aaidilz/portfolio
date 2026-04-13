@@ -144,10 +144,17 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
 
           <Column fillWidth gap="40" horizontal="center" marginTop="40">
             <Line maxWidth="40" />
-            <Text as="h2" id="recent-posts" variant="heading-strong-xl" marginBottom="24">
-              Recent posts
+            <Text as="h2" id="related-posts" variant="heading-strong-xl" marginBottom="24">
+              Related posts
             </Text>
-            <Posts exclude={[post.slug]} range={[1, 2]} columns="2" thumbnail direction="column" />
+            <Posts 
+              exclude={[post.slug]} 
+              tag={post.metadata.tag}
+              range={[1, 2]} 
+              columns="2" 
+              thumbnail 
+              direction="column" 
+            />
           </Column>
           <ScrollToHash />
         </Column>
