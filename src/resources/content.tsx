@@ -31,7 +31,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/muhammad-aidil-fikri-b88077333",
+    link: "https://www.linkedin.com/in/aaidilz",
     essential: true,
   },
   {
