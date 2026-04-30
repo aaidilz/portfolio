@@ -52,6 +52,12 @@ const social: Social = [
     link: `mailto:${person.email}`,
     essential: true,
   },
+  {
+    name: "Notes",
+    icon: "book",
+    link: "https://aaidilz.github.io/note",
+    essential: true,
+  }
 ];
 
 const home: Home = {
