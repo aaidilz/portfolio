@@ -1,0 +1,34 @@
+---
+title: Spear Limiter
+publishedAt: "2026-05-03"
+summary: "Spear Limiter adalah sebuah aplikasi yang dirancang untuk membantu pengguna dalam mengelola dan membatasi akses ke sumber daya tertentu berdasarkan kriteria yang ditentukan."
+images:
+  - "/images/projects/tools/spear-limiter/1.png"
+
+team:
+  - name: "Aidil Fikri"
+    role: "Offensive Security Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/aaidilz"
+
+link: "https://github.com/aaidilz/spear-limiter"
+
+tag:
+  - "Cyber Security"
+  - "Access Control"
+  - "Web Development"
+  - "Tool"
+---
+
+# Spear Limiter
+
+**Spear Limiter** adalah tool Python untuk network reconnaissance dan kontrol koneksi dalam jaringan lokal. Proyek ini termasuk **alat ofensif (offensive security tool)** karena menggunakan teknik seperti ARP spoofing dan manipulasi trafik untuk mengintervensi koneksi perangkat lain.
+
+Tool ini melakukan scanning jaringan dengan hasil yang lebih kaya dari sekadar IP dan MAC address. Informasi perangkat diperkaya menggunakan DHCP passive sniffing, mDNS discovery, reverse DNS lookup, NetBIOS query, serta inferensi vendor dari MAC address.
+
+Dalam skenario ofensif, Spear Limiter menyediakan beberapa mode pembatasan koneksi. Mode standar digunakan untuk memutus akses internet target, sedangkan mode game-ban memblokir trafik UDP tanpa memutus TCP untuk mensimulasikan gangguan pada aplikasi real-time. Tersedia juga fitur mass-ban untuk menargetkan banyak perangkat dalam satu subnet.
+
+Dari sisi implementasi, tool ini tetap memperhatikan kontrol dan stabilitas. Terdapat rate limiting untuk mencegah flooding, serta mekanisme clean exit yang mengembalikan ARP table dan firewall ke kondisi semula saat program dihentikan.
+
+Proyek ini dikembangkan sebagai eksplorasi di bidang cyber security, khususnya offensive security dan network manipulation, dengan fokus pada penggunaan dalam lingkungan yang memiliki izin.
+
