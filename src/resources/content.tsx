@@ -113,40 +113,35 @@ const about: About = {
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: " Security Researcher (Independent)",
-        timeframe: "2025 - Present",
-        role: "Independent Vulnerability Researcher",
+        company: "Independent Security Researcher",
+        timeframe: "2025 – Present",
+        role: "Vulnerability Researcher & Security Automation Engineer",
         achievements: [
           <>
-            Identified and responsibly disclosed critical vulnerabilities across various web
-            applications and system architectures, focusing on OWASP Top 10 and business logic flaws.
+            Identified and responsibly disclosed critical vulnerabilities in web applications
+            and distributed system architectures, with emphasis on OWASP Top 10 weaknesses
+            and complex business logic flaws.
           </>,
           <>
-            Developed custom Nuclei templates and automated reconnaissance workflows to increase
-            vulnerability detection efficiency by 40% in large-scale attack surfaces.
+            Engineered custom Nuclei templates and automated end-to-end reconnaissance
+            pipelines, improving vulnerability detection efficiency by <strong>40%</strong> across
+            large-scale attack surfaces.
           </>,
           <>
-            Conducted deep-dive security analysis on system-level defenses, specifically researching
-            eBPF-based monitoring and Micro-VM isolation to mitigate Privilege Escalation.
+            Conducted in-depth research on kernel-level defense mechanisms — including
+            <strong> eBPF-based runtime monitoring</strong> and Micro-VM isolation strategies —
+            to evaluate and mitigate privilege escalation vectors.
           </>,
           <>
-            Leveraged local AI models and custom scripts to audit Software Bill of Materials (SBOM)
-            and analyze reachable vulnerabilities in complex dependency trees.
+            Integrated local AI models with custom tooling to perform automated SBOM audits
+            and reachability analysis across complex third-party dependency trees.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          // {
-          //   src: "/images/projects/project-01/cover-01.jpg",
-          //   alt: "Once UI Project",
-          //   width: 16,
-          //   height: 9,
-          // },
-        ],
+        images: [],
       },
       {
         company: "Cybersecurity Matriculation Program",
@@ -154,12 +149,13 @@ const about: About = {
         role: "Interactive Learning Developer",
         achievements: [
           <>
-            Engineered an interactive, Docker-based Linux learning game designed to streamline
-            web security matriculation for university students.
+            Architected a <strong>Docker-based interactive Linux learning environment</strong>,
+            purpose-built to accelerate web security onboarding for undergraduate students.
           </>,
           <>
-            Containerized specialized environments to provide hands-on experience in command-line
-            navigation and server-side security without compromising host stability.
+            Designed containerized lab scenarios providing safe, hands-on exposure to
+            CLI workflows and server-side vulnerability exploitation — fully isolated
+            from host infrastructure.
           </>,
         ],
         images: [],
@@ -167,36 +163,38 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Pasundan Bandung",
-        description: <>Studied Information Technology.</>,
+        name: "Universitas Pasundan, Bandung",
+        description: <>Bachelor's program in Information Technology.</>,
       },
       {
         name: "Build the Future",
-        description: <>Studied offensive security.</>,
+        description: <>Specialized training in offensive security techniques and penetration testing methodologies.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Vulnerability Research & Automation",
+        title: "Vulnerability Research & Security Automation",
         description: (
           <>
-            Expert in orchestrating large-scale reconnaissance and vulnerability scanning
-            using <strong>Agentic AI</strong>. Proficient in developing custom templates for
-            detecting business logic flaws and OWASP Top 10 vulnerabilities with high precision.
+            Proficient in orchestrating large-scale reconnaissance and vulnerability assessment
+            pipelines using <strong>Agentic AI</strong> and custom tooling. Experienced in
+            crafting precise detection templates for OWASP Top 10 vulnerabilities and
+            non-trivial business logic flaws across diverse attack surfaces.
           </>
         ),
         tags: [
           { name: "Agentic AI", icon: "terminal" },
-          { name: "OWASP", icon: "shield" },
+          { name: "OWASP Top 10", icon: "shield" },
           { name: "Burp Suite", icon: "bug" },
+          { name: "Nuclei", icon: "zap" },
         ],
         images: [],
       },
@@ -204,9 +202,9 @@ const about: About = {
         title: "Linux System Administration & Hardening",
         description: (
           <>
-            Expert in managing and hardening <strong>Linux-based</strong> environments.
-            Skilled in local infrastructure deployment, including containerization for isolated services. Proficient in
-            system performance tuning and kernel-level monitoring for stable, high-performance operations.
+            Experienced in deploying and hardening <strong>Linux-based</strong> production
+            environments. Skilled in containerization, local infrastructure management,
+            and kernel-level performance tuning for secure, high-availability operations.
           </>
         ),
         tags: [
