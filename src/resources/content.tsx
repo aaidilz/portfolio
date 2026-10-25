@@ -1,5 +1,5 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
+import { Line, Row, SmartLink, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Aidil",
@@ -7,7 +7,7 @@ const person: Person = {
   name: `Muhammad Aidil Fikri`,
   role: "Offensive Security Engineer",
   avatar: "/images/avatar.jpg",
-  email: "muhaidfik@gmail.com",
+  email: "biastan@proton.me",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["Bahasa", "English"], // optional: Leave the array empty if you don't want to display languages
 };
@@ -91,7 +91,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `${person.name} — offensive security, vulnerability research, and practical tooling. Explore my approach, experience, and selected projects.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -100,62 +100,83 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "My approach",
     description: (
       <>
-        I am an offensive cybersecurity expert with a strong focus on in-depth technical (low-level) aspects and systems. I’m the kind of person who enjoys dissecting how a system works and how to protect it effectively.
+        <Text as="p" variant="heading-strong-xl">
+          I like understanding systems deeply enough to question their assumptions.
+        </Text>
+        <Text as="p" variant="body-default-l" onBackground="neutral-weak">
+          I’m Aidil, an offensive security engineer with assessment experience across mobile
+          applications, APIs, and web applications. I enjoy tracing how an application
+          handles data, where trust changes hands, and what happens when the expected path breaks.
+        </Text>
+        <Text as="p" variant="body-default-l" onBackground="neutral-weak">
+          My approach connects investigation with clear evidence: understand the behavior,
+          reproduce the issue, explain its impact, and make the next step actionable.
+          I also build applications and tools, which helps me reason about vulnerabilities
+          from both the tester’s and the developer’s perspective.
+        </Text>
       </>
     ),
   },
   work: {
     display: true,
-    title: "Work Experience",
+    title: "Experience",
     experiences: [
       {
         company: "Independent Security Researcher",
         timeframe: "2025 – Present",
-        role: "Vulnerability Researcher & Security Automation Engineer",
+        role: "Security Assessment & Vulnerability Research",
         achievements: [
           <>
-            Identified and responsibly disclosed critical vulnerabilities in web applications
-            and distributed system architectures, with emphasis on OWASP Top 10 weaknesses
-            and complex business logic flaws.
+            Received acknowledgment for identifying a <strong>security vulnerability at
+            a major hospital in West Java</strong>. The organization’s identity and technical
+            details remain confidential.
           </>,
           <>
-            Engineered custom Nuclei templates and automated end-to-end reconnaissance
-            pipelines, improving vulnerability detection efficiency by <strong>40%</strong> across
-            large-scale attack surfaces.
+            Contributed to security assessments of <strong>mobile applications, API endpoints,
+            and web applications</strong>, helping identify weaknesses and inform security
+            improvements.
           </>,
           <>
-            Conducted in-depth research on kernel-level defense mechanisms — including
-            <strong> eBPF-based runtime monitoring</strong> and Micro-VM isolation strategies —
-            to evaluate and mitigate privilege escalation vectors.
+            Participate in <strong>private bug bounty programs</strong>, researching
+            vulnerabilities within each program’s authorized scope and disclosure requirements.
           </>,
           <>
-            Integrated local AI models with custom tooling to perform automated SBOM audits
-            and reachability analysis across complex third-party dependency trees.
+            Support efforts to strengthen application security by documenting findings,
+            explaining their potential impact, and providing actionable remediation guidance.
+          </>,
+          <>
+            Build custom Nuclei templates and reconnaissance workflows to automate
+            repeatable checks and support deeper manual investigation.
           </>,
         ],
         images: [],
       },
       {
-        company: "Cybersecurity Matriculation Program",
+        company: "BYPAS — Cybersecurity Study Club",
         timeframe: "2026",
-        role: "Interactive Learning Developer",
+        role: "Initiator & Community Builder",
         achievements: [
           <>
-            Architected a <strong>Docker-based interactive Linux learning environment</strong>,
-            purpose-built to accelerate web security onboarding for undergraduate students.
+            Initiated and helped build <strong>BYPAS, a cybersecurity study club</strong>,
+            creating a space for students to learn, explore, and practice cybersecurity together.
+            {" "}<SmartLink href="https://bypas.unpas.ac.id">BYPAS website</SmartLink>
+            {" · "}<SmartLink href="https://www.instagram.com/bypas_id/">@bypas_id</SmartLink>
           </>,
           <>
-            Designed containerized lab scenarios providing safe, hands-on exposure to
-            CLI workflows and server-side vulnerability exploitation — fully isolated
-            from host infrastructure.
+            Built a <strong>Docker-based interactive Linux learning environment</strong>
+            {" "}for undergraduate students starting out in web security.
+          </>,
+          <>
+            Designed containerized exercises covering command-line workflows and
+            server-side vulnerabilities, with an emphasis on learning through practice.
           </>,
         ],
         images: [],
@@ -168,50 +189,78 @@ const about: About = {
     institutions: [
       {
         name: "Universitas Pasundan, Bandung",
-        description: <>Bachelor's program in Information Technology.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Specialized training in offensive security techniques and penetration testing methodologies.</>,
+        description: (
+          <>
+            <strong>Bachelor’s Program in Information Technology</strong>
+            <br />
+            Connecting academic learning with hands-on work in application security,
+            software development, and security research. Through BYPAS, I also help
+            build a learning community where students explore cybersecurity together.
+          </>
+        ),
       },
     ],
   },
   technical: {
     display: true,
-    title: "Technical Skills",
+    title: "What I work with",
     skills: [
       {
-        title: "Vulnerability Research & Security Automation",
+        title: "Mobile, API & Web Security",
         description: (
           <>
-            Proficient in orchestrating large-scale reconnaissance and vulnerability assessment
-            pipelines using <strong>Agentic AI</strong> and custom tooling. Experienced in
-            crafting precise detection templates for OWASP Top 10 vulnerabilities and
-            non-trivial business logic flaws across diverse attack surfaces.
+            My strongest focus is testing mobile applications, API endpoints, and web
+            applications, alongside security hardening. I combine established tools from
+            the Kali Linux ecosystem with custom tooling to investigate application
+            behavior, validate weaknesses, and guide practical improvements to security.
           </>
         ),
         tags: [
-          { name: "Agentic AI", icon: "terminal" },
-          { name: "OWASP Top 10", icon: "shield" },
-          { name: "Burp Suite", icon: "bug" },
-          { name: "Nuclei", icon: "zap" },
+          { name: "Mobile Security" },
+          { name: "API Security" },
+          { name: "Web Security" },
+          { name: "Security Hardening" },
+          { name: "Kali Linux" },
+          { name: "Custom Tooling" },
         ],
         images: [],
       },
       {
-        title: "Linux System Administration & Hardening",
+        title: "Agentic AI & Continuous Security Auditing",
         description: (
           <>
-            Experienced in deploying and hardening <strong>Linux-based</strong> production
-            environments. Skilled in containerization, local infrastructure management,
-            and kernel-level performance tuning for secure, high-availability operations.
+            I build agentic AI workflows that run recurring security audits and integrate
+            with application CI/CD pipelines through configured test harnesses. The goal
+            is to make security checks part of ongoing development, with repeatable
+            execution and findings that support further investigation and remediation.
           </>
         ),
         tags: [
-          { name: "Ubuntu", icon: "ubuntu" },
-          { name: "Bash Scripting", icon: "terminal" },
-          { name: "Docker", icon: "container" },
-          { name: "Kernel Tuning", icon: "cpu" },
+          { name: "Agentic AI" },
+          { name: "Security Automation" },
+          { name: "CI/CD Integration" },
+          { name: "Test Harnesses" },
+          { name: "Recurring Audits" },
+        ],
+        images: [],
+      },
+      {
+        title: "Software Development & DevOps",
+        description: (
+          <>
+            I work with Python, Next.js, and SQL/NoSQL databases to build applications,
+            data workflows, and custom tools. My work also spans DevOps and AI automation,
+            connecting application development with delivery workflows and automated tasks.
+            This development experience informs how I assess systems and approach hardening.
+          </>
+        ),
+        tags: [
+          { name: "Python" },
+          { name: "Next.js", icon: "nextjs" },
+          { name: "SQL" },
+          { name: "NoSQL" },
+          { name: "DevOps" },
+          { name: "AI Automation" },
         ],
         images: [],
       },

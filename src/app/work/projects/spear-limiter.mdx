@@ -1,7 +1,7 @@
 ---
 title: Spear Limiter
 publishedAt: "2026-05-03"
-summary: "Spear Limiter adalah sebuah aplikasi yang dirancang untuk membantu pengguna dalam mengelola dan membatasi akses ke sumber daya tertentu berdasarkan kriteria yang ditentukan."
+summary: "Tool CLI berbasis Python untuk menemukan perangkat, memperkaya identitas host, dan menguji kontrol koneksi pada jaringan lokal."
 images:
   - "/images/projects/tools/spear-limiter/1.png"
 
@@ -15,20 +15,41 @@ link: "https://github.com/aaidilz/spear-limiter"
 
 tag:
   - "Cyber Security"
-  - "Access Control"
-  - "Web Development"
-  - "Tool"
+  - "Python"
+  - "Network Security"
+  - "CLI Tool"
 ---
 
-# Spear Limiter
+## Overview
 
-**Spear Limiter** adalah tool Python untuk network reconnaissance dan kontrol koneksi dalam jaringan lokal. Proyek ini termasuk **alat ofensif (offensive security tool)** karena menggunakan teknik seperti ARP spoofing dan manipulasi trafik untuk mengintervensi koneksi perangkat lain.
+**Spear Limiter** adalah tool command-line untuk penemuan perangkat dan pengujian kontrol koneksi berbasis ARP pada jaringan lokal. Proyek ini ditujukan untuk pembelajaran serta pengujian keamanan dengan izin.
 
-Tool ini melakukan scanning jaringan dengan hasil yang lebih kaya dari sekadar IP dan MAC address. Informasi perangkat diperkaya menggunakan DHCP passive sniffing, mDNS discovery, reverse DNS lookup, NetBIOS query, serta inferensi vendor dari MAC address.
+## Problem
 
-Dalam skenario ofensif, Spear Limiter menyediakan beberapa mode pembatasan koneksi. Mode standar digunakan untuk memutus akses internet target, sedangkan mode game-ban memblokir trafik UDP tanpa memutus TCP untuk mensimulasikan gangguan pada aplikasi real-time. Tersedia juga fitur mass-ban untuk menargetkan banyak perangkat dalam satu subnet.
+Alamat IP dan MAC saja belum cukup untuk mengenali perangkat. Pengujian juga membutuhkan kontrol terhadap perilaku koneksi dan penanganan perubahan jaringan saat sesi berakhir.
 
-Dari sisi implementasi, tool ini tetap memperhatikan kontrol dan stabilitas. Terdapat rate limiting untuk mencegah flooding, serta mekanisme clean exit yang mengembalikan ARP table dan firewall ke kondisi semula saat program dihentikan.
+## Key Features
 
-Proyek ini dikembangkan sebagai eksplorasi di bidang cyber security, khususnya offensive security dan network manipulation, dengan fokus pada penggunaan dalam lingkungan yang memiliki izin.
+- **Identifikasi berlapis**: Memperkaya hasil pemindaian melalui DHCP pasif, mDNS, reverse DNS, NetBIOS, dan inferensi vendor MAC.
+- **Kontrol koneksi**: Menyediakan mode pemutusan koneksi dan mode pemblokiran UDP dengan mempertahankan TCP.
+- **Pengujian beberapa perangkat**: Mendukung operasi pada perangkat aktif dalam subnet, dengan jeda antar-target.
+- **Penutupan sesi**: Menyediakan mekanisme pemulihan ARP dan pembersihan aturan firewall ketika dihentikan melalui Ctrl+C.
+
+## Technologies Used
+
+- **Python** untuk logika aplikasi dan antarmuka CLI.
+- **Scapy** untuk operasi paket jaringan dan ARP.
+- **Linux & iptables** untuk pengaturan trafik pada mode pemblokiran UDP.
+
+## Engineering Considerations
+
+Identifikasi host menggabungkan beberapa sumber karena setiap perangkat dapat memberikan informasi berbeda. Hasilnya perlu dibaca sebagai petunjuk identitas, bukan jaminan identifikasi mutlak.
+
+Pengelolaan siklus sesi juga penting: perubahan koneksi harus disertai mekanisme pemulihan, bukan hanya berfokus pada keberhasilan pemblokiran.
+
+## Outcome
+
+Proyek ini menyatukan penemuan perangkat dan kontrol koneksi dalam satu CLI, sekaligus menjadi eksplorasi pemrograman jaringan dan pengelolaan trafik.
+
+Detail fitur dan penggunaan tersedia di [repositori Spear Limiter](https://github.com/aaidilz/spear-limiter).
 

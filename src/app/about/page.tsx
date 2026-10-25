@@ -117,6 +117,9 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
+            <Text variant="label-strong-s" onBackground="brand-weak" marginBottom="12">
+              OFFENSIVE SECURITY · RESEARCH · TOOLING
+            </Text>
             {about.calendar.display && (
               <Row
                 fitWidth
@@ -183,6 +186,7 @@ export default function About() {
                         <Row hide s={{ hide: false }}>
                           <IconButton
                             size="l"
+                            aria-label={item.name}
                             key={`${item.name}-icon`}
                             href={item.link}
                             icon={item.icon}
@@ -199,6 +203,61 @@ export default function About() {
           {about.intro.display && (
             <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
               {about.intro.description}
+              <Row gap="12" wrap paddingTop="8" s={{ horizontal: "center" }}>
+                <Button
+                  href={`mailto:${person.email}`}
+                  prefixIcon="email"
+                  label="Get in touch"
+                  variant="primary"
+                />
+                <Button
+                  href="/work"
+                  suffixIcon="arrowRight"
+                  label="Explore my projects"
+                  variant="secondary"
+                />
+              </Row>
+              <Column
+                fillWidth
+                gap="16"
+                padding="24"
+                marginTop="24"
+                radius="l"
+                border="neutral-alpha-weak"
+                background="neutral-alpha-weak"
+              >
+                <Text variant="label-strong-s" onBackground="brand-weak">
+                  SELECTED SECURITY PROJECTS
+                </Text>
+                <Column gap="8">
+                  <Heading as="h2" variant="heading-strong-m">PTSD Platform</Heading>
+                  <Text variant="body-default-m" onBackground="neutral-weak">
+                    A security reporting dashboard that connects assessment management,
+                    vulnerability tracking, and remediation reporting.
+                  </Text>
+                  <Button
+                    href="/work/ptsd-platform"
+                    label="Read the case study"
+                    suffixIcon="arrowRight"
+                    variant="tertiary"
+                    size="s"
+                  />
+                </Column>
+                <Column gap="8" paddingTop="16" borderTop="neutral-alpha-weak">
+                  <Heading as="h2" variant="heading-strong-m">Spear Limiter</Heading>
+                  <Text variant="body-default-m" onBackground="neutral-weak">
+                    A Python project exploring local network discovery, device identification,
+                    and connection control in authorized environments.
+                  </Text>
+                  <Button
+                    href="/work/spear-limiter"
+                    label="Explore the tool"
+                    suffixIcon="arrowRight"
+                    variant="tertiary"
+                    size="s"
+                  />
+                </Column>
+              </Column>
             </Column>
           )}
 

@@ -1,0 +1,51 @@
+---
+title: "Field Service Dashboard"
+publishedAt: "2026-10-26"
+summary: "Dashboard berbasis Python untuk mengolah spreadsheet, memantau tiket layanan, dan menyusun laporan dalam satu alur kerja."
+images:
+  - "/images/projects/field-service/1.png"
+team:
+  - name: "Aidil Fikri"
+    role: "Software Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/aaidilz"
+tag:
+  - "Python"
+  - "Data Processing"
+  - "Dashboard"
+---
+
+## Overview
+
+**Field Service Dashboard** adalah aplikasi berbasis Python untuk mengubah data spreadsheet menjadi informasi layanan yang lebih mudah ditelusuri. Aplikasi ini menyatukan unggahan data, pemantauan tiket, pencatatan progres, dan ekspor laporan melalui antarmuka web.
+
+Studi kasus ini menggunakan nama proyek yang disamarkan. Identitas organisasi, pelanggan, dan aturan bisnis khusus tidak diungkap dalam deskripsi proyek. Gambar di atas menampilkan preview antarmuka dashboard.
+
+## Key Features
+
+- **Impor dan validasi data**: Membaca CSV dan Excel, memeriksa struktur data, serta menyediakan tinjauan perubahan sebelum penyimpanan.
+- **Pemantauan tiket**: Menampilkan ringkasan status dan usia tiket, dengan filter periode serta penelusuran dari rekap ke rincian.
+- **Pelacakan progres**: Menyimpan riwayat pembaruan tiket agar progres tetap dapat ditelusuri saat dataset diperbarui.
+- **Pengelolaan versi dataset**: Memisahkan unggahan dan referensi data aktif untuk mendukung peninjauan perubahan serta pemulihan versi.
+- **Ekspor laporan**: Menyiapkan keluaran Excel untuk tabel dan laporan yang dapat ditinjau kembali di luar aplikasi.
+- **Kontrol akses**: Memisahkan kemampuan pengguna berdasarkan peran, termasuk tindakan administrasi dan pengelolaan data.
+
+## Technologies Used
+
+- **Python & Streamlit** untuk logika aplikasi dan antarmuka dashboard.
+- **pandas & NumPy** untuk normalisasi, penggabungan, dan agregasi data.
+- **SQLAlchemy** untuk lapisan akses penyimpanan data.
+- **Pandera** untuk validasi skema data tabular.
+- **openpyxl & xlrd** untuk membaca format Excel dan menyiapkan workbook laporan.
+
+## Challenges and Learnings
+
+Tantangan utama adalah menjaga konsistensi antara dataset yang terus diperbarui dan riwayat progres yang dicatat pengguna. Pembaruan sumber perlu ditinjau tanpa menggandakan catatan atau menghilangkan riwayat yang masih relevan.
+
+Alur unggah, tinjau, dan simpan membantu pengguna memahami perubahan sebelum mengaktifkannya. Penyimpanan transaksional serta pemeriksaan revisi membantu menjaga integritas ketika beberapa bagian data harus diperbarui bersama.
+
+Proyek ini juga memperdalam pengalaman dalam memisahkan pemrosesan data dari penyajian UI, menyelaraskan cakupan filter dengan laporan, dan menangani spreadsheet dengan struktur yang bervariasi.
+
+## Outcome
+
+Hasilnya adalah dashboard yang menghubungkan pengolahan spreadsheet dengan pemantauan layanan dan pelaporan. Pengguna dapat meninjau perubahan, menelusuri rincian tiket, dan menyiapkan laporan melalui satu aplikasi.

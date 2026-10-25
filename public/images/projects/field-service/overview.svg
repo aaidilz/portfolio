@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Field Service Dashboard</title>
+  <desc id="desc">Ilustrasi alur umum dari spreadsheet melalui validasi ke dashboard dan laporan, tanpa data operasional.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#101b30"/>
+      <stop offset="1" stop-color="#071018"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="system-ui, sans-serif">
+    <text x="120" y="150" fill="#70ddc3" font-size="22" letter-spacing="5">PYTHON / DATA PROCESSING</text>
+    <text x="120" y="245" fill="#f1f6fc" font-size="68" font-weight="700">Field Service Dashboard</text>
+    <text x="120" y="305" fill="#a8b9d0" font-size="27">Dari spreadsheet ke informasi yang mudah ditelusuri.</text>
+    <g fill="#142338" stroke="#30465f" stroke-width="2">
+      <rect x="120" y="410" width="390" height="260" rx="24"/>
+      <rect x="605" y="410" width="390" height="260" rx="24"/>
+      <rect x="1090" y="410" width="390" height="260" rx="24"/>
+    </g>
+    <g stroke="#70ddc3" stroke-width="3" fill="none">
+      <path d="M165 455h60v50h-60z M165 472h60 M185 455v50"/>
+      <path d="m650 482 15 15 32-35"/>
+      <path d="M1135 505v-45h60 M1150 495v-15 M1170 495v-25 M1190 495v-35"/>
+      <path d="M535 540h45m-12-12 12 12-12 12 M1020 540h45m-12-12 12 12-12 12"/>
+    </g>
+    <g fill="#f1f6fc" font-size="31" font-weight="600">
+      <text x="165" y="565">Impor data</text>
+      <text x="650" y="565">Validasi &amp; tinjauan</text>
+      <text x="1135" y="565">Dashboard &amp; laporan</text>
+    </g>
+    <g fill="#a8b9d0" font-size="23">
+      <text x="165" y="610">CSV / Excel</text>
+      <text x="650" y="610">Periksa perubahan data</text>
+      <text x="1135" y="610">Filter, rincian, ekspor</text>
+    </g>
+    <text x="120" y="795" fill="#a8b9d0" font-size="21">ILUSTRASI ALUR APLIKASI</text>
+  </g>
+</svg>
