@@ -1,3 +1,4 @@
+import { generatePageMetadata } from "@/utils/metadata";
 import {
   Heading,
   Text,
@@ -8,7 +9,6 @@ import {
   Badge,
   Row,
   Schema,
-  Meta,
   Line,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
@@ -17,7 +17,7 @@ import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  return generatePageMetadata({
     title: home.title,
     description: home.description,
     baseURL: baseURL,

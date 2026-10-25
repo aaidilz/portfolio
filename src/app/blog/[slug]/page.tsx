@@ -1,7 +1,7 @@
+import { generatePageMetadata } from "@/utils/metadata";
 import { notFound } from "next/navigation";
 import { CustomMDX, ScrollToHash } from "@/components";
 import {
-  Meta,
   Schema,
   Column,
   Heading,
@@ -44,11 +44,11 @@ export async function generateMetadata({
 
   if (!post) return {};
 
-  return Meta.generate({
+  return generatePageMetadata({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
-    image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
+    image: post.metadata.image || `/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`,
     path: `${blog.path}/${post.slug}`,
   });
 }

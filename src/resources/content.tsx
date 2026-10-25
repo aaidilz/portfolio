@@ -64,8 +64,8 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  title: `${person.name} (Aaidilz) | ${person.role}`,
+  description: `Explore Muhammad Aidil Fikri's portfolio: offensive security, vulnerability research, mobile, API and web application assessments, and practical security tools.`,
   headline: <>Securing Systems, Building Experiences.</>,
   featured: {
     display: false,
@@ -281,7 +281,7 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Security tools, web applications, and software projects by ${person.name}. Explore practical work in offensive security and software development.`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

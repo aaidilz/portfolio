@@ -1,3 +1,4 @@
+import { generatePageMetadata } from "@/utils/metadata";
 import "@once-ui-system/core/css/styles.css";
 import "@once-ui-system/core/css/tokens.css";
 import "@/resources/custom.css";
@@ -8,22 +9,31 @@ import {
   Background,
   Column,
   Flex,
-  Meta,
   opacity,
   RevealFx,
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import { baseURL, effects, fonts, style, dataStyle, home, person, social } from "@/resources";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  const metadata = generatePageMetadata({
     title: home.title,
     description: home.description,
     baseURL: baseURL,
     path: home.path,
     image: home.image,
   });
+  return {
+    ...metadata,
+    applicationName: `${person.name}'s Portfolio`,
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+      other: process.env.BING_SITE_VERIFICATION
+        ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+        : undefined,
+    },
+  };
 }
 
 export default async function RootLayout({
@@ -45,6 +55,35 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": `${baseURL}/#person`,
+                  name: person.name,
+                  alternateName: "Aaidilz",
+                  url: baseURL,
+                  image: `${baseURL}${person.avatar}`,
+                  jobTitle: person.role,
+                  sameAs: social.map((profile) => profile.link).filter((link) => link.startsWith("https://")),
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": `${baseURL}/#website`,
+                  url: baseURL,
+                  name: `${person.name}'s Portfolio`,
+                  description: home.description,
+                  inLanguage: "en",
+                  publisher: { "@id": `${baseURL}/#person` },
+                },
+              ],
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{

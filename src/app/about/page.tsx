@@ -1,3 +1,4 @@
+import { generatePageMetadata } from "@/utils/metadata";
 import {
   Avatar,
   Button,
@@ -8,7 +9,6 @@ import {
   Media,
   Tag,
   Text,
-  Meta,
   Schema,
   Row,
 } from "@once-ui-system/core";
@@ -18,7 +18,7 @@ import styles from "@/components/about/about.module.scss";
 import React from "react";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  return generatePageMetadata({
     title: about.title,
     description: about.description,
     baseURL: baseURL,
